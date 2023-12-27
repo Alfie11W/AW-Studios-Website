@@ -1,1 +1,35 @@
+/* Resetting default margin and padding */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling the top header */
+.top-header {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+}
+
+.top-header nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+.top-header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.top-header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Setting the background of the whole site to black */
+body {
+    background-color: black;
+    color: white; /* Default text color for the site */
+}
 
