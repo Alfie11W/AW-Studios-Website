@@ -37,9 +37,32 @@
         body {
             background-color: black;
             color: white; /* Default text color for the site */
+            font-family: Arial, sans-serif; /* Sample font */
+            padding: 20px; /* Adding padding for content */
         }
 
-        /* Your additional CSS styles go here */
+        /* Styling for the main content */
+        .main-content {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        /* Styling for the hero section */
+        .hero {
+            background-image: url('path/to/your/image.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 500px; /* Adjust height as needed */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        /* Additional CSS styles go here */
+
     </style>
 </head>
 <body>
@@ -56,8 +79,37 @@
         </nav>
     </header>
 
+    <!-- Home Page Content -->
+    <div class="main-content">
+        <div class="hero">
+            <h1>Welcome to AW Studios</h1>
+            <p>Empowering your journey in the tech world</p>
+        </div>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>A brief description of the company and its mission.</p>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>Explore our consultation, skill development, career coaching, and networking events.</p>
+        </section>
+
+        <section id="blog">
+            <h2>Latest Blog Posts</h2>
+            <p>Read our insightful articles and stay updated with industry trends.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us for inquiries and consultations.</p>
+        </section>
+    </div>
+
     <!-- Rest of your website content here -->
 
 </body>
 </html>
+
 
