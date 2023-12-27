@@ -4,65 +4,17 @@
     <meta charset="UTF-8">
     <title>AW Studios - Empowering Your Tech Journey</title>
     <style>
-        /* Resetting default margin and padding */
-        body, ul {
-            margin: 0;
-            padding: 0;
+        /* Your existing styles here */
+
+        /* Hide sections by default */
+        section {
+            display: none;
         }
 
-        /* Styling the top header */
-        header {
-            background-color: black;
-            color: white;
-            padding: 10px 0;
+        /* Show section when it has an "active" class */
+        section.active {
+            display: block;
         }
-
-        header nav ul {
-            list-style: none;
-            text-align: center;
-        }
-
-        header nav ul li {
-            display: inline;
-            margin: 0 10px;
-        }
-
-        header nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* Setting the background of the whole site to black */
-        body {
-            background-color: black;
-            color: white; /* Default text color for the site */
-            font-family: Arial, sans-serif; /* Sample font */
-            padding: 20px; /* Adding padding for content */
-        }
-
-        /* Styling for the main content */
-        .main-content {
-            text-align: center;
-            padding: 50px 0;
-        }
-
-        /* Styling for the hero section */
-        .hero {
-            background-image: url('path/to/your/image.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 500px; /* Adjust height as needed */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-        }
-
-        /* Additional CSS styles go here */
-
     </style>
 </head>
 <body>
@@ -70,11 +22,11 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#about" onclick="showSection('about')">About Us</a></li>
+                <li><a href="#services" onclick="showSection('services')">Services</a></li>
+                <li><a href="#blog" onclick="showSection('blog')">Blog</a></li>
+                <li><a href="#contact" onclick="showSection('contact')">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -85,6 +37,10 @@
             <h1>Welcome to AW Studios</h1>
             <p>Empowering your journey in the tech world</p>
         </div>
+
+        <section id="home" class="active">
+            <!-- Home content here -->
+        </section>
 
         <section id="about">
             <h2>About Us</h2>
@@ -107,12 +63,17 @@
         </section>
     </div>
 
-    <section id="home">
-            <h2>Home</h2>
-            <p>Home Page for AW Studios</p>
-        </section>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
 
-    <!-- Rest of your website content here -->
+            const selectedSection = document.getElementById(sectionId);
+            selectedSection.classList.add('active');
+        }
+    </script>
 
 </body>
 </html>
