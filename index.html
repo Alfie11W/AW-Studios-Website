@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>AW Studios - Empowering Your Tech Journey</title>
     <style>
+        /* Your existing styles here */
+
         /* Resetting default margin and padding */
         body, ul {
             margin: 0;
@@ -88,7 +90,7 @@
 
     <!-- Home Page Content -->
     <div class="main-content">
-        <div class="hero">
+        <div class="hero" id="hero-section">
             <h1>Welcome to AW Studios</h1>
             <p>Empowering your journey in the tech world</p>
         </div>
@@ -127,6 +129,14 @@
 
             const selectedSection = document.getElementById(sectionId);
             selectedSection.classList.add('active');
+
+            // Hide the hero section when navigating to other sections
+            const heroSection = document.getElementById('hero-section');
+            if (sectionId !== 'home') {
+                heroSection.style.display = 'none';
+            } else {
+                heroSection.style.display = 'block';
+            }
         }
     </script>
 
